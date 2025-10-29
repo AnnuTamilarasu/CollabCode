@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
     <nav class="navbar">
         <button data-page="index.html" onclick="window.location.href='./index.html'">Home</button>
-        <button data-page="todo.html" onclick="window.location.href='todo.html'">ToDo</button>
         <button data-page="Code.html" onclick="window.location.href='Code.html'">Chat</button>
         <button onclick="window.location.href='Code.html'">Editor</button>
         ${
