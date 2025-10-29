@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
 import { javascript } from '@codemirror/lang-javascript';
-import { io } from 'socket.io-client';
-
-const socket = io('http://localhost:4000');
+import { socket } from './index';
 
 function CodeEditor() {
   const [code, setCode] = useState('// Start coding here...');
@@ -22,14 +20,31 @@ function CodeEditor() {
   };
 
   return (
-    <div className="editor-container">
-      <CodeMirror
-        value={code}
-        height="400px"
-        theme="dark"
-        extensions={[javascript()]}
-        onChange={(value) => handleChange(value)}
-      />
+    <div style={{ 
+      flex: 1, 
+      display: 'flex', 
+      width: '100%', 
+      height: '100%' 
+    }}>
+      <div className="editor-container" style={{ 
+        flex: 1, 
+        display: 'flex', 
+        width: '100%', 
+        height: '100%',
+        minHeight: '500px',
+        backgroundColor: '#1e1e1e',
+        borderRadius: '8px',
+        overflow: 'hidden'
+      }}>
+        <CodeMirror
+          value={code}
+          height="100%"
+          width="100%"
+          theme="dark"
+          extensions={[javascript()]}
+          onChange={handleChange}
+        />
+      </div>
     </div>
   );
 }

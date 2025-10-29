@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comic Neue", cursive;
+  font-weight: 300;
+  font-style: normal;
+  color:linear-gradient(120deg, #42cfec, #d877ca);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #06002e;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  height: 100%;
+  padding: 0 40px;
+  border-radius: 10px;
+}
+
+.box-border {
+  --border-width: 3px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Lato, sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  background: #06002e;
+  gap: 15px;
+  width: 40%;
+  padding: 5%;
+  border-radius: 20px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(
+      60deg,
+      hsl(195, 100%, 50%),
+      hsl(269, 90%, 81%),
+      hsl(314, 74%, 75%),
+      hsl(195, 100%, 44%)
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: 20px;
+    animation: moveGradient 4s alternate infinite;
+  }
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+
+.pink-btn,
+.delete-btn {
+  background: linear-gradient(120deg, #42cfec, #d877ca);
+  color: #06002e;
+  border: none;
+  padding: 13px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1.15rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.855);
+}
+
+.pink-btn:hover,
+.delete-btn:hover {
+  background: linear-gradient(120deg, #27bcd9, #df53ca);
+  transform: scale(1.05);
+}
+/* Input box */
+.input-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 10px 17px;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 194, 209, 0.3);
+  color: #333;
+}
+
+.input-box input::placeholder {
+  color: #bcbcbc;
+}
+
+.input-box button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.1rem;
+  background: rgba(200, 59, 111);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.855);
+}
+
+.input-box button:hover {
+  transform: scale(1.1);
+  background: #A22452;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}

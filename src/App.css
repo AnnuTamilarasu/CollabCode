@@ -1,5 +1,28 @@
+@import url('./WebPg/CSS/Code.css');
 .App {
   text-align: center;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: calc(var(--content-height)-80px);
+  width: var(--codeSpace-width);
+}
+
+.Code-container {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 5vm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  background-color: #f0f0f0;
 }
 
 .App-logo {
@@ -15,7 +38,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;

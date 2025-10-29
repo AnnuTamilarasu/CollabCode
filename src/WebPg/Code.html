@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code</title>
+
+    <link rel="stylesheet" href="CSS/Code.css" />
+    <link rel="stylesheet" href="CSS/nav.css" />
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+    <div class="CodeSpace">
+      <div id="root"></div>
+    </div>
+    <div class="Chat" id="chat-panel">
+      <div class="chat-nav">
+        <button id="chat-toggle" class="chat-toggle" aria-expanded="true" aria-controls="chat-panel" title="Collapse chat">‹</button>
+        <button class="chat-tab active" data-tab="main">Chat</button>
+        <button class="chat-tab" data-tab="history">History</button>
+        <button class="chat-tab" data-tab="settings">Settings</button>
+      </div>
+      <div class="chat-content">
+        <div class="chat-view" id="main-view">
+          <div class="chat-inner"></div>
+          <div class="footer">
+
+        </div>
+        </div>
+        <div class="chat-view hidden" id="history-view">No previous chats.</div>
+        <div class="chat-view hidden" id="settings-view">Settings panel.</div>
+      </div>
+    </div>
+
+    <script src="JS/nav.js"></script>
+    <script src="JS/Code.js" defer></script>
+    <!--script src="Client/App.js" defer></script-->
+  </body>
+</html>

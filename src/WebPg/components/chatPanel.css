@@ -1,0 +1,7 @@
+
+.Chat {
+  flex: 0 0 300px;
+  height: 100%;
+  border-left: 1px solid #ccc;
+  background: white;
+}
