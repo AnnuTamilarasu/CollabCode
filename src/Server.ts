@@ -28,9 +28,13 @@ app.use(cors({
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-// Health check endpoint
-app.get("/", (req, res) => {
-  res.json({ message: "Socket.IO server is running", status: "ok" });
+app.get("/", (_req, res) => {
+  res.json({ 
+    message: "Socket.IO server is running", 
+    status: "ok",
+    timestamp: new Date().toISOString(),
+    connections: io ? io.engine.clientsCount : 0
+  });
 });
 
 app.post("/upload", upload.single("picture"), (req, res) => {
