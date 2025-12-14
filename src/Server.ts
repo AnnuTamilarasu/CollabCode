@@ -9,8 +9,8 @@ const app = express();
 // Update with your actual Vercel domain
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://your-app.vercel.app", // Your Vercel domain
-  "https://annutamilarasu.github.io", // Your GitHub Pages domain
+  "https://your-app.vercel.app",
+  "https://annutamilarasu.github.io",
 ];
 
 app.use(cors({
