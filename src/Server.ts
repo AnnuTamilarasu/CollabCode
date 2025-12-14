@@ -6,7 +6,6 @@ import multer from "multer";
 
 const app = express();
 
-// Update with your actual Vercel domain
 const allowedOrigins = [
   "http://localhost:5173",
   "https://your-app.vercel.app",
@@ -15,7 +14,6 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: (origin, callback) => {
-    // Allow requests with no origin (mobile apps, Postman, etc.)
     if (!origin) return callback(null, true);
     
     if (allowedOrigins.includes(origin)) {
